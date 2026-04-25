@@ -7,8 +7,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-
 export class App {
-  title = 'Hola mundo angualar';
+  protected readonly title = signal('Yael');
 }
-AbortSignal

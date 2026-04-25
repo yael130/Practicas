@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+.counter-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  margin: 0 0 20px;
+  color: #334155;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.counter-display {
+  margin-bottom: 40px;
+  padding: 30px 0;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+}
+
+.value {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #1e293b;
+  transition: color 0.3s ease;
+  line-height: 1;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.value.positive {
+  color: #10b981;
+}
+
+.value.negative {
+  color: #ef4444;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-decrement, .btn-increment {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn-decrement {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+.btn-decrement:hover {
+  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%);
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+}
+
+.btn-increment {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.btn-increment:hover {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.btn-reset {
+  padding: 12px 24px;
+  border-radius: 99px;
+  background: white;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  gap: 8px;
+}
+
+.btn-reset:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
